@@ -1,0 +1,7 @@
+{
+"notes":[
+  {"id":1,"firstname":"Altynay ","lastname":"Sabitzhan","phonenumber":"4572415425","role":"student","message":"I am a student"},
+  {"id":2,"firstname":"Margit  ","lastname":"Tennosaari","phonenumber":"4578915425","role":"teacher","message":"Margit is a teacher"},
+  {"id":3,"firstname":"Saara ","lastname":"Leppihalme","phonenumber":"0002415425","role":"student","message":"Saara is a student"}
+]
+  }

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Form from "./components/Form";
 import View from "./components/View";
 import Popup from "./components/Popup";
+import Notes from "./components/Notes";
+import axios from "axios";
 
 class App extends Component {
   state = {
@@ -11,7 +13,18 @@ class App extends Component {
     message: "",
     role: "",
     showPopup: false,
+    data: [],
   };
+
+  componentDidMount() {
+    axios.get("http://localhost:3001/notes").then((res) => {
+      this.setState({ data: res.data });
+      console.log(this.state.data);
+    });
+  }
+
+  // console.log(res);
+  //console.log(res.data);
 
   inputHandler = (e) => {
     this.setState({
@@ -35,9 +48,14 @@ class App extends Component {
 
     return (
       <div>
-        <Form change={this.inputHandler} submit={this.popupHandler} />
-        <View {...props} />
+        <div className="form_area">
+          <Form change={this.inputHandler} submit={this.popupHandler} />
+          <View {...props} />
+        </div>
         {this.state.showPopup && <Popup {...props} />}
+        {this.state.data.map((note) => (
+          <Notes {...note} /> //u r opening the item and sending it
+        ))}
       </div>
     );
   }

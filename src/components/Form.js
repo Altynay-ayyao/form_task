@@ -27,7 +27,7 @@ const Form = (props) => {
         <label htmlFor="phone">Phonenumber</label>
         <input
           type="phone"
-          name="phone"
+          name="phonenumber"
           id="phone"
           required
           onChange={props.change}
@@ -58,3 +58,4 @@ const Form = (props) => {
 };
 
 export default Form;
+//Form is passing data to View and Popup, Note itself is seperated world, Form can't pass data directly , we pass data from App to other components. State is in the App.js. Sblings can't pass data.

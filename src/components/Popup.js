@@ -17,7 +17,7 @@ const Popup = (props) => {
             Last name: <span>{props.last}</span>
           </p>
           <p>
-            Phonenumber: <span>{props.phone}</span>
+            Phonenumber: <span>{props.phonenumber}</span>
           </p>
           <p>
             Message: <span>{props.message}</span>
