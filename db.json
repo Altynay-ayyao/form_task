@@ -1,7 +1,68 @@
 {
-"notes":[
-  {"id":1,"firstname":"Altynay ","lastname":"Sabitzhan","phonenumber":"4572415425","role":"student","message":"I am a student"},
-  {"id":2,"firstname":"Margit  ","lastname":"Tennosaari","phonenumber":"4578915425","role":"teacher","message":"Margit is a teacher"},
-  {"id":3,"firstname":"Saara ","lastname":"Leppihalme","phonenumber":"0002415425","role":"student","message":"Saara is a student"}
-]
-  }
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "Altynay ",
+      "lastname": "Sabitzhan",
+      "phonenumber": "4572415425",
+      "role": "student",
+      "message": "I am a student"
+    },
+    {
+      "id": 2,
+      "firstname": "Margit  ",
+      "lastname": "Tennosaari",
+      "phonenumber": "4578915425",
+      "role": "teacher",
+      "message": "Margit is a teacher"
+    },
+    {
+      "id": 3,
+      "firstname": "Saara ",
+      "lastname": "Leppihalme",
+      "phonenumber": "0002415425",
+      "role": "student",
+      "message": "Saara is a student"
+    },
+    {
+      "firstname": "jdkfjfkdj",
+      "lastname": "sdfjsdkjfksjdk",
+      "phonenumber": "ksjdfksjdklsjdfk",
+      "message": "this is from post method",
+      "role": "student",
+      "id": 4
+    },
+    {
+      "firstname": "fdfsdfd",
+      "lastname": "dsfdsf",
+      "phonenumber": "sdfsfd",
+      "message": "sdfsdsdf",
+      "role": "student",
+      "id": 5
+    },
+    {
+      "firstname": "dfd",
+      "lastname": "fdfd",
+      "phonenumber": "fdfd",
+      "message": "fdfd",
+      "role": "student",
+      "id": 6
+    },
+    {
+      "firstname": "fjdkjfkdj",
+      "lastname": "fsdfsdfds",
+      "phonenumber": "fdsdfsfds",
+      "message": "sdfsdsfs",
+      "role": "teacher",
+      "id": 7
+    },
+    {
+      "firstname": "fdfdfs",
+      "lastname": "dsdfsd",
+      "phonenumber": "sdfsdsd",
+      "message": "dfsdsfds",
+      "role": "teacher",
+      "id": 8
+    }
+  ]
+}

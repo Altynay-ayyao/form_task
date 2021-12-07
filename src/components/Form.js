@@ -35,10 +35,11 @@ const Form = (props) => {
       </div>
       <div>
         <label htmlFor="role">Role</label>
-        <select name="role" id="role" onChange={props.change}>
-          <option value="teacher" selected>
-            Teacher
+        <select name="role" id="role" onChange={props.change} required>
+          <option value="" selected>
+            Choose a role
           </option>
+          <option value="teacher">Teacher</option>
           <option value="student">Student</option>
           <option value="other">Other</option>
         </select>
