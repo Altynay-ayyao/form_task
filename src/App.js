@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Form from "./components/Form";
+import View from "./components/View";
+import Popup from "./components/Popup";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    firstname: "",
+    lastname: "",
+    phonenumber: "",
+    message: "",
+    role: "",
+    showPopup: false,
+  };
+
+  inputHandler = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  popupHandler = (event) => {
+    event.preventDefault();
+    this.setState({ showPopup: true });
+  };
+
+  render() {
+    const props = {
+      first: this.state.firstname,
+      last: this.state.lastname,
+      phone: this.state.phonenumber,
+      role: this.state.role,
+      message: this.state.message,
+    };
+
+    return (
+      <div>
+        <Form change={this.inputHandler} submit={this.popupHandler} />
+        <View {...props} />
+        {this.state.showPopup && <Popup {...props} />}
+      </div>
+    );
+  }
 }
 
 export default App;
