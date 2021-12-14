@@ -27,7 +27,7 @@ const Form = (props) => {
         <label htmlFor="phone">Phonenumber</label>
         <input
           type="phone"
-          name="phonenumber"
+          name="phone"
           id="phone"
           required
           onChange={props.change}
@@ -35,11 +35,10 @@ const Form = (props) => {
       </div>
       <div>
         <label htmlFor="role">Role</label>
-        <select name="role" id="role" onChange={props.change} required>
-          <option value="" selected>
-            Choose a role
+        <select name="role" id="role" onChange={props.change}>
+          <option value="teacher" selected>
+            Teacher
           </option>
-          <option value="teacher">Teacher</option>
           <option value="student">Student</option>
           <option value="other">Other</option>
         </select>
@@ -59,4 +58,3 @@ const Form = (props) => {
 };
 
 export default Form;
-//Form is passing data to View and Popup, Note itself is seperated world, Form can't pass data directly , we pass data from App to other components. State is in the App.js. Sblings can't pass data.

@@ -3,17 +3,16 @@ import Form from "./components/Form";
 import View from "./components/View";
 import Popup from "./components/Popup";
 import Notes from "./components/Notes";
+
 import axios from "axios";
 
 class App extends Component {
   state = {
-    inputData: {
-      firstname: "",
-      lastname: "",
-      phonenumber: "",
-      message: "",
-      role: "",
-    },
+    firstname: "",
+    lastname: "",
+    phonenumber: "",
+    message: "",
+    role: "",
     showPopup: false,
     data: [],
   };
@@ -25,13 +24,10 @@ class App extends Component {
     });
   }
 
-  // console.log(res);
-  //console.log(res.data);
-
   inputHandler = (e) => {
     this.setState({
-      inputData: { ...this.state.inputData, [e.target.name]: e.target.value },
-    }); //...this.state.inputData is one is opening where you put setState
+      [e.target.name]: e.target.value,
+    });
   };
 
   popupHandler = (event) => {
@@ -39,29 +35,24 @@ class App extends Component {
     this.setState({ showPopup: true });
   };
 
-  postHandler = (event) => {
-    axios
-      .post("http://localhost:3001/notes", this.state.inputData)
-      .then((res) => {
-        console.log(res);
-        this.setState({ showPopup: false });
-        window.location.reload();
-      })
-      .catch((error) => console.logd(error));
-  };
-
   render() {
+    const props = {
+      first: this.state.firstname,
+      last: this.state.lastname,
+      phone: this.state.phonenumber,
+      role: this.state.role,
+      message: this.state.message,
+    };
+
     return (
       <div>
         <div className="form_area">
           <Form change={this.inputHandler} submit={this.popupHandler} />
-          <View {...this.state.inputData} />
+          <View {...props} />
         </div>
-        {this.state.showPopup && (
-          <Popup {...this.state.inputData} post={this.postHandler} />
-        )}
+        {this.state.showPopup && <Popup {...props} />}
         {this.state.data.map((note) => (
-          <Notes {...note} key={note.id} /> //u r opening the item and sending it
+          <Notes {...note} />
         ))}
       </div>
     );

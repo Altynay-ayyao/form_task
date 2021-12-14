@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap");
 
 * {
   margin: 0;
@@ -13,8 +13,8 @@ body {
 
 input[type="submit"],
 button {
-  background-color: darkolivegreen;
-  color: white;
+  background-color: #02475e;
+  color: #fefecc;
   text-transform: uppercase;
   padding: 0.8rem;
   border-radius: 5px;
@@ -35,20 +35,25 @@ button {
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: rgb(45, 60, 19);
+  background-color: #0cecdd;
+  color: #687980;
 }
 
 .secondary {
-  border: darkolivegreen;
-  color: darkolivegreen;
+  border: #02475e;
+  color: #0cecdd;
   background: transparent;
+}
+
+.secondary:hover {
+  background-color: #0cecdd;
+  color: #f6f6f6;
 }
 
 /***************** FORM COMPONENT *********************/
 form {
   padding: 2rem;
-
-  color: white;
+  color: #02475e;
 }
 label {
   width: 150px;
@@ -61,7 +66,7 @@ input,
 textarea,
 select {
   font-family: "Roboto" sans-serif;
-  background: #f4f4f4;
+  background: white;
   border: 1px solid rgb(102, 102, 102);
   width: 250px;
   padding: 0.8rem;
@@ -76,7 +81,8 @@ select {
 }
 
 .notepad {
-  background: #f4f4f4;
+  background: #00adb5;
+  color: #fff6cd;
   margin: 1rem 0;
   position: relative;
   box-shadow: 0 0 5px rgb(121, 121, 121);
@@ -86,8 +92,8 @@ select {
   content: "";
   width: 2px;
   height: 100%;
-  border-left: 1px solid rgb(255, 77, 0);
-  border-right: 1px solid rgb(255, 77, 0);
+  border-left: 1px solid #fefecc;
+  border-right: 1px solid #fefecc;
   position: absolute;
   left: 35px;
 }
@@ -122,12 +128,13 @@ select {
   position: relative;
   top: 0;
   left: 0;
-  height: 50%;
-  width: 50%;
-  background-color: white;
+  height: 90%;
+  width: 90%;
+  background-color: #112031;
   padding: 2rem;
   box-shadow: 0 0 5px #333;
   margin: 0 auto;
+  opacity: 0.8;
 }
 .popup p {
   padding: 1rem 0;
@@ -135,10 +142,10 @@ select {
 
 .form_area {
   display: flex;
-  background: rgb(11, 57, 95);
+  background: #fff6cd;
 }
 
-.Notes {
-  margin-top: 4rem;
-  margin-left: 4rem;
+.notes {
+  margin: 4rem;
+  font-family: "Ubuntu", sans-serif;
 }
